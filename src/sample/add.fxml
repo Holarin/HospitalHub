@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane prefHeight="266.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AddController">
+   <VBox layoutX="14.0" layoutY="14.0" prefHeight="225.0" prefWidth="131.0" spacing="30.0">
+      <CheckBox fx:id="day1" mnemonicParsing="false" text="Понедельник"/>
+      <CheckBox fx:id="day2" mnemonicParsing="false" text="Вторник"/>
+      <CheckBox fx:id="day3" mnemonicParsing="false" text="Среда"/>
+      <CheckBox fx:id="day4" mnemonicParsing="false" text="Четверг"/>
+      <CheckBox fx:id="day5" mnemonicParsing="false" text="Пятница"/>
+   </VBox>
+   <VBox layoutX="445.0" layoutY="14.0" prefHeight="72.0" prefWidth="141.0" spacing="30.0">
+      <RadioButton fx:id="f1" mnemonicParsing="false" selected="true" text="с 8:00 до 13:00">
+         <toggleGroup>
+            <ToggleGroup fx:id="time"/>
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="f2" mnemonicParsing="false" text="с 14:00 до 19:00" toggleGroup="$time"/>
+   </VBox>
+   <VBox layoutX="176.0" layoutY="14.0" prefHeight="188.0" prefWidth="240.0">
+      <TextField fx:id="secondNameField" prefHeight="31.0" prefWidth="266.0" promptText="Фамилия"/>
+      <TextField fx:id="nameField" prefHeight="31.0" prefWidth="266.0" promptText="Имя"/>
+      <TextField fx:id="fatherField" prefHeight="31.0" prefWidth="266.0" promptText="Отчество"/>
+      <ComboBox fx:id="specBox" prefHeight="31.0" prefWidth="258.0" promptText="Специальность"/>
+      <TextField fx:id="cabField" prefHeight="31.0" prefWidth="266.0" promptText="Кабинет"/>
+   </VBox>
+   <Button fx:id="add" layoutX="176.0" layoutY="208.0" mnemonicParsing="false" text="Добавить"/>
+   <Button fx:id="decline" layoutX="351.0" layoutY="208.0" mnemonicParsing="false" text="Отмена"/>
+</AnchorPane>
